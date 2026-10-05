@@ -28,7 +28,7 @@ public class UsuarioController {
     }
 
     @DeleteMapping("/deletar")
-    public ResponseEntity<String> deleteUsuario(@RequestBody @Valid Long id){
+    public ResponseEntity<String> deleteUsuario(@RequestParam @Valid Long id){
         return ResponseEntity.status(HttpStatus.OK).body(usuarioService.excluir(id));
     }
 }
